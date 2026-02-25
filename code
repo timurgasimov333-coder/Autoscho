@@ -1,0 +1,27 @@
+import warnings
+
+class AgeError(Exception):
+    pass
+
+print("Welcome to AutoSchool 🚗")
+age = int(input("Введи возраст: "))
+
+if age < 12:
+    raise AgeError("Ты еще слишком мал для управления транспортом")
+
+if age == 12:
+    print("Ты можешь водить скутер 🛵")
+
+elif age == 15:
+    print("Ты можешь водить велосипед 🚴")
+
+elif age == 16:
+    warnings.warn("Ты можешь водить мопед", UserWarning)
+
+elif age > 18:
+    print("Ты можешь водить автомобиль 🚗")
+
+else:
+    print("Для этого возраста транспорт не предусмотрен")
+
+print("Проверка завершена")
